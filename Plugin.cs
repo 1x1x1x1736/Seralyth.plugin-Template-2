@@ -4,7 +4,7 @@ using Seralyth.Mods;
 using UnityEngine;
 using Seralyth.Managers;
 using Seralyth.Menu;
-using GorillaLocomotion;
+// Unused thingy
 namespace SeralythPlugin
 {
     public class Plugin
