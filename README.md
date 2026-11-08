@@ -1,5 +1,5 @@
 # Seralyth Plugin Template
-seralyth Plugin Template is a template used for developing custom plugins for Seralyth Remake Menu 5.5.0+. This plugin template is meant for plugin developers, if you don't know what you're doing stick to the plugin library.
+seralyth Plugin Template is a template used for developing custom plugins for Seralyth Remake Menu 10.0.0+. This plugin template is meant for plugin developers, if you don't know what you're doing stick to the plugin library.
 
 ## Do I need permission to use this?
 No, this template is free and public for anyone to use. You are welcome to utilize it for your projects, modify it to suit your needs, and share it with others. We believe in a collaborative and open community where resources are accessible to all.
