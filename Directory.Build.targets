@@ -1,0 +1,54 @@
+<Project>
+  <!-- Map the menu variant being compiled against to its plugin folder -->
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Debug'">
+    <_PluginDest>$(GamePath)\SeralythMenu</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Classic'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Classic</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake.Client'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Client</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Free'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Free</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Legal'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Legal</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Legacy'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Legacy</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Lite'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Lite</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Paid'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Paid</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Pro'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Pro</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Reborn'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Reborn</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Redux'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Redux</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Reforged'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Reforged</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Trial'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Trial</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MenuDllName)'=='Seralyth Remake Ultra'">
+    <_PluginDest>$(GamePath)\SeralythMenu\Ultra</_PluginDest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(_PluginDest)'==''">
+    <_PluginDest>$(GamePath)\SeralythMenu</_PluginDest>
+  </PropertyGroup>
+
+  <Target Name="CopyToPlugins" AfterTargets="Build" Condition="'$(CI)'!='TRUE'">
+    <MakeDir Directories="$(_PluginDest)\Plugins" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(_PluginDest)\Plugins" SkipUnchangedFiles="true" />
+    <Message Text="Copied to $(_PluginDest)\Plugins" Importance="high"/>
+  </Target>
+</Project>
